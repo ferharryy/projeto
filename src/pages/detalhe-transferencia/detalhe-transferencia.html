@@ -1,0 +1,28 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Detalhe</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+
+    <div text-center>
+      <h2 ion-text color="primary">Beneficiario</h2>
+      <h3 ion-text color="primary">Nome: {{ transferencia.beneficiario.nome }}</h3>
+      <h3 ion-text color="primary">Agencia: {{ transferencia.beneficiario.agencia }}</h3>
+      <h3 ion-text color="primary">Conta: {{ transferencia.beneficiario.conta }}</h3>
+      <h3 ion-text color="primary">Banco: {{ transferencia.beneficiario.banco }}</h3>
+      <h2 ion-text color="secondary">Pagador</h2>
+      <h3 ion-text color="secondary">Nome: {{ transferencia.pagador.nome }}</h3>
+      <h3 ion-text color="secondary">Agencia: {{ transferencia.pagador.agencia }}</h3>
+      <h3 ion-text color="secondary">Conta: {{ transferencia.pagador.conta }}</h3>
+      <h3 ion-text color="secondary">Banco: {{ transferencia.pagador.banco }}</h3>
+      <h3>Status: {{transferencia.status}}</h3>
+      <h3>Tipo: {{transferencia.tipo}}</h3>
+      <h3>Valor: {{transferencia.valor}}</h3>
+    </div>
+</ion-content>

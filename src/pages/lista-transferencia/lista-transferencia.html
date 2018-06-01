@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Lista Transferencia</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-searchbar [(ngModel)]="termos" ></ion-searchbar>
+  <ion-list>
+    <button ion-item *ngFor="let transferencia of transferencias | pesquisar: termos" (click)="detalheTransferencia(transferencia)">       
+      Beneficiario: {{ transferencia.beneficiario.nome }} <br>
+      Pagador: {{ transferencia.pagador.nome}} <br>
+      Status: {{ transferencia.status }} <br>
+      Tipo: {{ transferencia.tipo}}
+    </button>
+  </ion-list>
+
+  <ion-infinite-scroll (ionInfinite)='getTransferencias($event)'>
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Aguarde..."></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
